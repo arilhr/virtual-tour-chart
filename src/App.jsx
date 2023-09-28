@@ -119,9 +119,6 @@ function App() {
 
   useEffect(() => {
     const fillData = () => {
-      console.log(chartData2);
-      if (!chartData2) return;
-
       if (index2 >= chartData2.length) {
         return;
       }
@@ -129,8 +126,8 @@ function App() {
       setAnimatedChartData2((prev) => [
         ...prev,
         {
-          x: chartData2[index].x,
-          y: chartData2[index].y,
+          x: chartData2[index2].x,
+          y: chartData2[index2].y,
         },
       ]);
       setIndex2((prev) => prev + 1);
